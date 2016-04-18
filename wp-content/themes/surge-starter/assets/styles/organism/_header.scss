@@ -1,0 +1,24 @@
+header.banner{
+	background-color:$blue;
+	padding: 2em 0;
+
+	.nav-primary{
+		background-color: $blue-light;
+    margin-bottom: -5em;
+    margin-top: 1.5em;
+    z-index: 1;
+    position: relative;
+		ul{
+			li{
+				display:inline-block;
+				float:left;
+				a{
+					@extend .button;
+					@extend .p3;
+					font-weight: bold;
+					padding:1.5em 1.7em;
+				}
+			}
+		}
+	}
+}

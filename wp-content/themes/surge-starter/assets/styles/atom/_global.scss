@@ -1,1 +1,52 @@
+body{
+	font-family: 'Raleway';
+	color: $text-color;
+}
+.button{
+	background-color: $colour3;
+	color: #fff;
+	text-transform:uppercase;
+	&:hover{
+		background-color:#fff;
+		color: $colour2;
+	}
+}
+
+.h1{
+	font-size: 60px;
+	font-weight: 300;
+}
+.h2{
+	font-size: 48px;
+	font-weight: 900;
+}
+.h3{
+	font-size: 48px;
+	font-weight: 700;
+}
+.h4{
+	font-size: 48px;
+	font-weight: 300;
+}
+.h5{
+	font-size: 30px;
+	font-weight: 700;
+}
+
+.p1{
+	font-size: 18px;
+	font-weight: 500;
+	line-height:2;
+}
+.p2{
+	font-size: 24px;
+	font-weight: 700;
+	line-height:2;
+}
+.p3{
+	font-family: 'Open Sans';
+	font-size: 18px;
+	font-weight: 400;
+	line-height:2;
+}
 

@@ -38,12 +38,17 @@ add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 ======================================*/
 $custom_includes = [
   'lib/aq_resizer.php',    // Scripts and stylesheets
+  'lib/acf-option-page.php',             // Option page   
+  'lib/function-addComponent.php',       // Add Component Tool   
+  'lib/function_get_component.php',       // Get Component Tool   
   'lib/function-debug.php',    // Scripts and stylesheets
   'lib/function-display-gravity-form.php',    // Scripts and stylesheets
   'lib/function-includePart.php',    // Scripts and stylesheets
   'lib/function-get_id_from_slug.php',    // Scripts and stylesheets
   'lib/function-get-featured-image-url.php',    // Scripts and stylesheets
-  'lib/function-truncate-content.php'    // Scripts and stylesheets
+  'lib/function-truncate-content.php',    // Scripts and stylesheets
+  'lib/function-able-svg-upload.php',    // Able Upload SVG to WP
+
 
 ];
 

@@ -1,0 +1,15 @@
+footer#footer{
+	@extend .p3;
+	.container-top{
+		padding: 3em 0;
+		span:first-child{
+			margin-right: 3em;
+		}
+	}
+	.container-bottom{
+		padding: 4em 0;
+		background-color: $blue;
+		text-transform: uppercase;
+		color: #fff;
+	}
+}

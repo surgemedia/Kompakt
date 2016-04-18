@@ -1,0 +1,22 @@
+.social-contact{
+
+    display: inline-block;
+    float: right;
+		
+	ul{
+		margin: 0;
+		padding: 0.5em 0;
+		list-style:none;
+		li{
+			@extend .p3;
+			display:inline-block;
+			float:left;
+			color:#fff;
+			margin-left:1em;
+			i{
+				font-size: 1.3em;
+				vertical-align: middle;
+			}
+		}
+	}
+}
