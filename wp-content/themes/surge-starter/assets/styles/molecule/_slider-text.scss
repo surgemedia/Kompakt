@@ -1,0 +1,21 @@
+.slider-text{
+	background-color: $blue;
+	color:#fff;
+	height:25em;
+	padding:5em;
+	h1{
+		@extend .h2;
+		text-transform:uppercase;
+		margin-bottom: 0em;
+	}
+	h2{
+		@extend .h5;
+		text-transform:uppercase;
+		margin-top: 0;
+		margin-bottom: 1em;
+	}
+	p{
+		@extend .p3;
+		line-height: 2;
+	}
+}

@@ -19,9 +19,11 @@ use Roots\Sage\Wrapper;
       get_template_part('components/organism/header');
     ?>
     <div class="wrap" role="document">
-      <div class="content row">
+      <div class="content ">
         <main class="main">
-          <?php include Wrapper\template_path(); ?>
+          <div class="row">
+            <?php include Wrapper\template_path(); ?>
+          </div>
         </main><!-- /.main -->
         <?php if (Setup\display_sidebar()) : ?>
           <aside class="sidebar">

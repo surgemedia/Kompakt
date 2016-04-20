@@ -7,7 +7,8 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "bootstrap-sass": "3.3.6"
+    "bootstrap-sass": "3.3.6",
+    "owl.carousel": "OwlCarousel2#^2.1.0"
   },
   "overrides": {
     "bootstrap-sass": {
@@ -31,6 +32,12 @@
         "./assets/fonts/bootstrap/glyphicons-halflings-regular.woff",
         "./assets/fonts/bootstrap/glyphicons-halflings-regular.woff2"
       ]
+    },
+    "owl.carousel": {
+      "main": [
+        "./src/scss/owl.carousel.scss",
+        "./src/js/owl.carousel.js"
+        ]
     }
   }
 }

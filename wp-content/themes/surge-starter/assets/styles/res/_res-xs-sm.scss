@@ -1,0 +1,19 @@
+/*======================================
+=            Gallery Custom            =
+======================================*/
+.gallery{
+
+	p{
+		
+	}
+	ul{
+	
+		li:nth-child(odd){
+			padding-right:1em;
+		}
+		li:nth-child(even){
+			padding-left:1em;
+		}
+	}
+}
+

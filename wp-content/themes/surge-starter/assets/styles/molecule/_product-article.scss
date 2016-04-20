@@ -1,0 +1,26 @@
+.product-article{
+	padding-bottom:3em;
+		.img-bg{
+			height:25em;
+			background-size:cover;
+		}
+		.wrapper{
+			padding:0 3em; 
+			margin-top: 2.6em; 
+			h1{
+				@extend .h5;
+				color:$text-color;
+				text-transform:uppercase;
+				margin-bottom: 0.8em;
+			}
+			p{
+				@extend .p1;
+				line-height:1.5em;
+				margin-bottom: 2em;
+			}
+			.link{
+				width:80%;
+				display: inline-block;
+			}
+		}
+}

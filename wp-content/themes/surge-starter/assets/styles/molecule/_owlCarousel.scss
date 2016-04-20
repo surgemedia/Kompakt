@@ -1,0 +1,42 @@
+.owlCarousel{
+	position:relative;
+	.owl-next,
+	.owl-prev{
+		position:absolute;
+		top:50%;
+		z-index: 2;
+		color:#fff;
+	}
+	.owl-next{
+		right:10%;
+	}
+	.owl-prev{
+		left:10%;
+	}
+	.owl-item{
+		position:relative;
+		.wrapper{
+			display: none;
+		}
+		&:after{
+			content: "";
+			background-color: rgba(255,255,255,0.5);
+			position:absolute;
+			top:0;
+			width:100%;
+			height: 100%;
+			left:0;
+			
+		}
+		&.active.center{
+			.wrapper{
+				display: block;
+			}
+			&:after{
+				background-color: transparent;
+				
+			}
+		}
+	}
+
+}

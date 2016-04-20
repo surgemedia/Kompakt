@@ -75,3 +75,43 @@
   $(document).ready(UTIL.loadEvents);
 
 })(jQuery); // Fully reference jQuery after this point.
+
+
+/*==================================
+=            Kompakt JS            =
+==================================*/
+
+
+
+(function($) {
+
+function loadCarousel(tag){
+ $(tag).owlCarousel({
+  nav : true,
+  loop : true,
+  center:true,
+  responsive : {
+    // breakpoint from 0 up
+    0 : {
+        items:1
+    },
+    // breakpoint from 600 up
+    750 : {
+        items:2
+    },
+    // breakpoint from 992 up
+    1200 : {
+         items:3
+    }
+  }
+ });
+  /*$('.owlCarousel .owl-next').click(function() {
+      $(tag).trigger('next.owl.carousel');
+  })
+  $('.owlCarousel .owl-prev').click(function() {
+      $(tag).trigger('prev.owl.carousel');
+  })*/
+}
+loadCarousel(".owl-carousel");
+
+})(jQuery); // Fully reference jQuery after this point.

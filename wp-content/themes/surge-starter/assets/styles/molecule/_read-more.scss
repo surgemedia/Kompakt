@@ -1,0 +1,20 @@
+.read-more{
+	height:100%;
+	background-color: coral;
+	background-size: cover;
+	padding-top:8em;
+	position:relative;
+	.wrapper{
+		
+		h1{
+			@extend .h4;
+			text-transform:uppercase;
+			color:#fff;
+		}
+		.link{
+			position: absolute;
+	    bottom: 40px;
+	    right: 40px;
+		}
+	}
+}

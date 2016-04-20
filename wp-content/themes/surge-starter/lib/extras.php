@@ -48,6 +48,7 @@ $custom_includes = [
   'lib/function-get-featured-image-url.php',    // Scripts and stylesheets
   'lib/function-truncate-content.php',    // Scripts and stylesheets
   'lib/function-able-svg-upload.php',    // Able Upload SVG to WP
+  'lib/post_type-products.php',    // Custom Post Type
 
 
 ];

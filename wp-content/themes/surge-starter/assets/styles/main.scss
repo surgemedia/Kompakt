@@ -3,6 +3,7 @@
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "../../bower_components/owl.carousel/src/scss/owl.carousel.scss";
 // endbower
 
 /*============================
@@ -11,11 +12,11 @@
 @import "atom/global";
 @import "atom/fonts";
 @import "atom/brand";
+@import "atom/link";
 
 /*================================
 =            Molecule            =
 ================================*/
-@import "molecule/buttons";
 @import "molecule/comments";
 @import "molecule/forms";
 @import "molecule/grid";
@@ -24,6 +25,14 @@
 @import "molecule/social-contact";
 @import "molecule/jumbotron";
 @import "molecule/content-text";
+@import "molecule/read-more";
+@import "molecule/search-field";
+@import "molecule/product-article";
+@import "molecule/slider-text";
+@import "molecule/slider-item";
+@import "molecule/contact-us";
+@import "molecule/gallery-item";
+@import "molecule/owlCarousel";
 
 /*================================
 =            Organism            =
@@ -34,6 +43,7 @@
 @import "organism/posts";
 @import "organism/tinymce";
 @import "organism/search";
+@import "organism/gallery";
 
 
 /*----------  RESPONSIVE  ----------*/

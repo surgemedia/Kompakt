@@ -1,0 +1,22 @@
+.gallery-item{
+  /* width: 33em; */
+  height: 27em;
+  background-size: cover;
+  display: table;
+  .wrapper{
+  	display: table-cell;
+    vertical-align: middle;
+    padding: 0 9%;
+	  h1,h2{
+	  	text-transform: uppercase;
+	  	color:#fff;	
+	  }
+	  h1{
+	  	@extend .h2;
+	  	margin-top: 0;
+	  }
+	  h2{
+	  	@extend .h4;
+	  }
+  }
+}
