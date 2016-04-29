@@ -13,17 +13,14 @@
         
     =============================================*/
 
-
-   if (has_post_thumbnail()) { 
-      $image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); 
-   } else{$image="";}
+   
  	get_component([
         'template' => 'molecule/general-box',
         'remove_tags' => ["h2","p"],
         'vars' => [
                 "jumbotron text-center", //class         
-                $image,                    //image bg
-                get_the_title(), //element1
+                aq_resize(get_field('background_image'),1920,1080,true,true,true),//image bg
+                get_field('title').' <br>'.get_field('subtitle'), //element1
                 ]
     ]);
     			?>
