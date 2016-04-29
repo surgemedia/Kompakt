@@ -87,3 +87,25 @@ header.banner{
 .search-field{
 	padding-top:1em;
 }
+
+/*==================================
+=            Contact Us            =
+==================================*/
+.contact-us{
+	
+	&:before{
+		
+	}
+	.wrapper{
+		width: 100%;
+    padding:1em;
+	}
+}
+
+/*=============================================
+=            Section comment block            =
+=============================================*/
+.h1{
+	font-size:50px;
+}
+

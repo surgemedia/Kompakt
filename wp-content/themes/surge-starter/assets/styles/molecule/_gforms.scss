@@ -56,7 +56,7 @@
 										border-left: 3px solid $grey-border;
 										b {
 											//arrow
-											background-image:url('');
+											background-image:none !important;
 											&:before{
 												@extend .icon-core;
 												@extend .icon-drop-extend;
