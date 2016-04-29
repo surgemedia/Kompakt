@@ -3,39 +3,11 @@
 
  ?>
 
-<section class="<?php echo $var['class'] ?>" style="background-image: url(../assets/images/jumbotron.jpg);">
+<section class="<?php echo $var['class'] ?>" >
 	
-	<!-- contact-us gravity form -->
-	<div id="gravity-form" class="col-lg-8 col-md-offset-2">
-      
-                <div class="gf_browser_chrome gform_wrapper" id="gform_wrapper_1"><a id="gf_1" class="gform_anchor"></a><form method="post" enctype="multipart/form-data" target="gform_ajax_frame_1" id="gform_1" action="/#gf_1">
-                        <div class="gform_heading">
-                            <h3 class="gform_title">Contact Us Today</h3>
-                            <span class="gform_description">Should you have any  queries or feedback on our service,
-please use the form below to contact us.</span>
-                        </div>
-                        <div class="gform_body"><ul id="gform_fields_1" class="gform_fields top_label form_sublabel_below description_below"><li id="field_1_3" class="gfield show-label gfield_contains_required field_sublabel_below field_description_below"><label class="gfield_label" for="input_1_3">About you:<span class="gfield_required">*</span></label><div class="ginput_container ginput_container_text"><input name="input_3" id="input_1_3" type="text" value="" class="large" tabindex="1" placeholder="Name*"></div></li><li id="field_1_2" class="gfield no-label gfield_contains_required field_sublabel_below field_description_below"><label class="gfield_label" for="input_1_2"><span class="gfield_required">*</span></label><div class="ginput_container ginput_container_email">
-                            <input name="input_2" id="input_1_2" type="text" value="" class="large" tabindex="2" placeholder="Email*">
-                        </div></li><li id="field_1_4" class="gfield no-label gfield_contains_required field_sublabel_below field_description_below"><label class="gfield_label" for="input_1_4"><span class="gfield_required">*</span></label><div class="ginput_container ginput_container_phone"><input name="input_4" id="input_1_4" type="text" value="" class="large" tabindex="3" placeholder="Phone*"></div></li><li id="field_1_5" class="gfield show-label gfield_contains_required field_sublabel_below field_description_below"><label class="gfield_label" for="input_1_5">Your enquiry is about:<span class="gfield_required">*</span></label><div class="ginput_container ginput_container_select"><select name="input_5" id="input_1_5" class="large gfield_select" tabindex="-1" style="display: none;"><option value="" selected="selected" class="gf_placeholder">Select an option-</option><option value="I am looking to Buy">I am looking to Buy</option><option value="I am looking to Sell">I am looking to Sell</option><option value="I am looking for a Property Manager">I am looking for a Property Manager</option></select><div class="chosen-container chosen-container-single chosen-container-single-nosearch" style="width: 484px;" title="" id="input_1_5_chosen"><a class="chosen-single"><span>Select an option-</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off" readonly="" tabindex="4"></div><ul class="chosen-results"></ul></div></div></div></li><li id="field_1_6" class="gfield no-label field_sublabel_below field_description_below"><label class="gfield_label" for="input_1_6"></label><div class="ginput_container ginput_container_textarea">
-					<textarea name="input_6" id="input_1_6" class="textarea large" tabindex="5" placeholder="Your Comment" rows="10" cols="50"></textarea><grammarly-btn><div style="z-index: 2; opacity: 1; transform: translate(464.781px, 626.75px);" class="_9b5ef6-textarea_btn _9b5ef6-not_focused" data-grammarly-reactid=".0"><div class="_9b5ef6-transform_wrap" data-grammarly-reactid=".0.0"><div title="Protected by Grammarly" class="_9b5ef6-status" data-grammarly-reactid=".0.0.0">&nbsp;</div></div></div></grammarly-btn>
-				</div></li><li id="field_1_7" class="gfield gform_validation_container field_sublabel_below field_description_below"><label class="gfield_label" for="input_1_7">Comments</label><div class="ginput_container"><input name="input_7" id="input_1_7" type="text" value=""></div><div class="gfield_description">This field is for validation purposes and should be left unchanged.</div></li>
-                            </ul></div>
-        <div class="gform_footer top_label"> <input type="submit" id="gform_submit_button_1" class="gform_button button" value="SUBMIT" tabindex="6" onclick="if(window[&quot;gf_submitting_1&quot;]){return false;}  window[&quot;gf_submitting_1&quot;]=true;  "> <input type="hidden" name="gform_ajax" value="form_id=1&amp;title=1&amp;description=1&amp;tabindex=1">
-            <input type="hidden" class="gform_hidden" name="is_submit_1" value="1">
-            <input type="hidden" class="gform_hidden" name="gform_submit" value="1">
-            
-            <input type="hidden" class="gform_hidden" name="gform_unique_id" value="">
-            <input type="hidden" class="gform_hidden" name="state_1" value="WyJbXSIsImE4MWYyNDE4Y2U3NTM1ODMyYmVmM2I2NTRlZTk1MWVhIl0=">
-            <input type="hidden" class="gform_hidden" name="gform_target_page_number_1" id="gform_target_page_number_1" value="0">
-            <input type="hidden" class="gform_hidden" name="gform_source_page_number_1" id="gform_source_page_number_1" value="1">
-            <input type="hidden" name="gform_field_values" value="">
-            
-        </div>
-                        </form>
-                        </div>
-                <iframe style="display:none;width:0px;height:0px;" src="about:blank" name="gform_ajax_frame_1" id="gform_ajax_frame_1"></iframe>
-                <script type="text/javascript">jQuery(document).ready(function($){gformInitSpinner( 1, 'http://www.pinnacleproperties.com.au/wp-content/plugins/gravityforms/images/spinner.gif' );jQuery('#gform_ajax_frame_1').load( function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_1');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_1').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;if(is_form){jQuery('#gform_wrapper_1').html(form_content.html());setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */ jQuery(document).scrollTop(jQuery('#gform_wrapper_1').offset().top); }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_1').val();gformInitSpinner( 1, 'http://www.pinnacleproperties.com.au/wp-content/plugins/gravityforms/images/spinner.gif' );jQuery(document).trigger('gform_page_loaded', [1, current_page]);window['gf_submitting_1'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('#gforms_confirmation_message_1').html();if(!confirmation_content){confirmation_content = contents;}setTimeout(function(){jQuery('#gform_wrapper_1').replaceWith('<' + 'div id=\'gforms_confirmation_message_1\' class=\'gform_confirmation_message_1 gforms_confirmation_message\'' + '>' + confirmation_content + '<' + '/div' + '>');jQuery(document).scrollTop(jQuery('#gforms_confirmation_message_1').offset().top);jQuery(document).trigger('gform_confirmation_loaded', [1]);window['gf_submitting_1'] = false;}, 50);}else{jQuery('#gform_1').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger('gform_post_render', [1, current_page]);} );} );</script><script type="text/javascript"> if(typeof gf_global == 'undefined') var gf_global = {"gf_currency_config":{"name":"U.S. Dollar","symbol_left":"$","symbol_right":"","symbol_padding":"","thousand_separator":",","decimal_separator":".","decimals":2},"base_url":"http:\/\/www.pinnacleproperties.com.au\/wp-content\/plugins\/gravityforms","number_formats":[],"spinnerUrl":"http:\/\/www.pinnacleproperties.com.au\/wp-content\/plugins\/gravityforms\/images\/spinner.gif"};jQuery(document).bind('gform_post_render', function(event, formId, currentPage){if(formId == 1) {if(typeof Placeholders != 'undefined'){
-                        Placeholders.enable();
-                    }} } );jQuery(document).bind('gform_post_conditional_logic', function(event, formId, fields, isInit){} );</script><script type="text/javascript"> jQuery(document).ready(function(){jQuery(document).trigger('gform_post_render', [1, 1]) } ); </script>    </div>
-	
+	<div class="wrapper">
+        <!-- contact-us gravity form -->
+        <?php echo do_shortcode('[gravityform id=1 title=true description=true]'); ?>
+    </div>
+	  
 </section>

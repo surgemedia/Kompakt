@@ -29,10 +29,14 @@
 @import "molecule/search-field";
 @import "molecule/product-article";
 @import "molecule/slider-text";
-@import "molecule/slider-item";
 @import "molecule/contact-us";
 @import "molecule/gallery-item";
 @import "molecule/owlCarousel";
+@import "molecule/product-carousel";
+@import "molecule/product-content";
+@import "molecule/related-title";
+@import "molecule/gforms";
+@import "molecule/product-enquiry";
 
 /*================================
 =            Organism            =
@@ -44,6 +48,8 @@
 @import "organism/tinymce";
 @import "organism/search";
 @import "organism/gallery";
+@import "organism/product-detail";
+@import "organism/enquiry";
 
 
 /*----------  RESPONSIVE  ----------*/

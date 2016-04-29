@@ -7,6 +7,11 @@ footer#footer{
 		span:first-child{
 			margin-right: 3em;
 		}
+		span{
+			a{
+				color:$text-color;
+			}
+		}
 	}
 	.container-bottom{
 		padding: 4em 0;

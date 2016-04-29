@@ -18,5 +18,18 @@
 				vertical-align: middle;
 			}
 		}
+		li:first-child{
+			width:1.3em;
+			overflow: hidden;
+			height: 2em;
+			transition: 0.3s width ease;
+			a{
+				color:#fff;
+			}
+			&:hover{
+				width:10.5em;
+				transition: 0.3s width ease;
+			}
+		}
 	}
 }

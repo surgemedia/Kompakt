@@ -8,7 +8,8 @@
   "private": true,
   "dependencies": {
     "bootstrap-sass": "3.3.6",
-    "owl.carousel": "OwlCarousel2#^2.1.0"
+    "owl.carousel": "OwlCarousel2#^2.1.0",
+    "blueimp-gallery-with-desc": "^2.16.4"
   },
   "overrides": {
     "bootstrap-sass": {
@@ -37,7 +38,12 @@
       "main": [
         "./src/scss/owl.carousel.scss",
         "./src/js/owl.carousel.js"
-        ]
+      ]
+    },"blueimp-gallery-with-desc": {
+      "main": [
+        "./css/blueimp-gallery.min.css",
+        "./js/jquery.blueimp-gallery.min.js"
+      ]
     }
   }
 }

@@ -1,0 +1,86 @@
+.product-equiry{
+	min-height:37em;
+	background:$grey-background;
+	padding-top:3em;
+	display:inline-block;
+	
+	.gform_wrapper{
+		form{
+			.gform_heading{
+				padding-left: 1em;
+				.gform_title{
+					text-align: left;
+				}
+				.gform_description{
+			 		text-align: left;
+				}
+			}
+			.gform_body{
+				.gform_fields{
+					@extend .list-inline;
+
+					.gfield{
+						@extend .col-md-6;
+						@extend .col-xs-12;
+						clear: none;
+						.gfield_label{
+							.gfield_required{
+							}
+						}
+						.ginput_container{
+							input,select,textarea{
+							}
+							input{
+							}
+							select{
+							}
+							textarea{
+								height: 10em;
+							}
+							.chosen-container {
+								
+
+								a.chosen-single {
+									   
+										span {
+											
+										}
+										div {
+										
+											b {
+												//arrow
+										
+												&:before{
+												
+												}
+											}
+										}
+								}
+								.chosen-drop {
+									.chosen-search {
+										input {
+										
+										}
+									}
+									ul.chosen-results {
+										li {
+									
+										}
+										li.highlighted {
+											
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			.gform_footer{
+				input[type=submit].gform_button{
+					margin-right: .64em;
+				}
+			}
+		}
+	}
+}

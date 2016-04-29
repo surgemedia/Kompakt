@@ -1,20 +1,47 @@
 .read-more{
 	height:100%;
-	background-color: coral;
 	background-size: cover;
-	padding-top:8em;
 	position:relative;
 	.wrapper{
-		
-		h1{
-			@extend .h4;
+		h1,h2{
 			text-transform:uppercase;
-			color:#fff;
 		}
 		.link{
 			position: absolute;
 	    bottom: 40px;
 	    right: 40px;
+		}
+	}
+}
+
+
+
+.search .read-more{
+	padding-top:8em;
+	background-position: center;
+	height: 30em;
+	.wrapper{
+		h1{
+			@extend .h4;
+			color:#fff;
+		}
+	}
+}
+
+.enquiry .read-more{
+	padding-top:4em;
+	padding-left:4em;
+	height: 37em;
+	.wrapper{
+		h1{
+			@extend .h2;
+			color:#fff;
+			margin-bottom: 0;
+		}
+		h2{
+			@extend .h4;
+			color:#fff;
+			margin-top: 0;
 		}
 	}
 }

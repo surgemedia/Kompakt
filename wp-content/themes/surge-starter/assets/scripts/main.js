@@ -85,33 +85,51 @@
 
 (function($) {
 
-function loadCarousel(tag){
- $(tag).owlCarousel({
-  nav : true,
-  loop : true,
-  center:true,
-  responsive : {
-    // breakpoint from 0 up
-    0 : {
-        items:1
-    },
-    // breakpoint from 600 up
-    750 : {
-        items:2
-    },
-    // breakpoint from 992 up
-    1200 : {
-         items:3
-    }
+  function loadCarousel(tag,options){
+   $(tag).owlCarousel(options);
   }
- });
-  /*$('.owlCarousel .owl-next').click(function() {
-      $(tag).trigger('next.owl.carousel');
-  })
-  $('.owlCarousel .owl-prev').click(function() {
-      $(tag).trigger('prev.owl.carousel');
-  })*/
+
+
+  loadCarousel(".owlCarousel .owl-carousel",{
+    nav : true,
+    loop : true,
+    center:true,
+    responsive : {
+      // breakpoint from 0 up
+      0 : {
+          items:1
+      },
+      // breakpoint from 600 up
+      750 : {
+          items:2
+      },
+      // breakpoint from 992 up
+      1200 : {
+           items:3
+      }
+    }
+   });
+
+  loadCarousel(".product-carousel .owl-carousel",{
+    nav : true,
+    loop : true,
+    items:1
+   });
+
+
+function chosenActivate(tag){
+  $(tag).chosen();
 }
-loadCarousel(".owl-carousel");
+
+$(document).ready(function(){
+
+  chosenActivate(".select-chosen");
+});
+
+
+$('.image-gallery-button').on('click', function (event) {
+    event.preventDefault();
+    blueimp.Gallery($('#links a'));
+  })
 
 })(jQuery); // Fully reference jQuery after this point.

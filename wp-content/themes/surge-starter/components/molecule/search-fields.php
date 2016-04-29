@@ -6,12 +6,12 @@
 		
 		<div class="col-xs-12">
 			<label for="">keywords</label>
-			<input type="text" placeholder="Please input the keywords related">
+			<input class="input" type="text" placeholder="Please input the keywords related">
 		</div>
 		
 		<div class="col-xs-12 col-sm-6">
 			<label for="">Container type</label>
-			<select class="chosen" id="">
+			<select class="select-chosen" id="">
 				<option value="">-ANY-</option>
 				<option value="">Big</option>
 				<option value="">Small</option>
@@ -23,7 +23,7 @@
 		
 		<div class="col-xs-12 col-sm-6">
 			<label for="">size</label>
-			<select class="chosen" name="" id="">
+			<select class="select-chosen" name="" id="">
 				<option value="">-ANY-</option>
 				<option value="">Big</option>
 				<option value="">Small</option>
@@ -37,9 +37,9 @@
 				get_component([
                         'template' => 'atom/button-call',
                         'vars' => [
-                                    "call text-center", //class    
-                                    "search",                  //image bg
-                                     "",//element1
+                                    "link text-center", //class    
+                                    "search", //text
+                                     "",//action
                                                                           
                                     ]
                     ]);

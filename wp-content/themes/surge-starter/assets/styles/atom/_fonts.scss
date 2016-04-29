@@ -61,6 +61,7 @@
     font-weight: normal;
     font-style: normal;
 }
+.icon-core,
 [class*='icon-']:before{
 	display: inline-block;
    font-family: 'Glyphter';
@@ -80,3 +81,5 @@
 .icon-telephone:before{content:'\0047';}
 .icon-share:before{content:'\0048';}
 .icon-pinterest:before{content:'\0049';}
+.icon-drop-extend,
+.icon-drop:before{content:'\004A';}

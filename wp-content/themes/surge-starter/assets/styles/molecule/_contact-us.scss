@@ -1,4 +1,27 @@
 .contact-us{
 	display:inline-block;
 	width:100%;
+	background-color:$grey-background;
+	overflow:hidden;
+	min-height:66em;
+	position:relative;
+	padding-top:4em;
+	&:before{
+		content: "K";
+    position: absolute;
+    font-family: Raleway;
+    font-weight: 800;
+    color: $grey-light;
+    font-size: 95em;
+    line-height: 0.6;
+    height: 100%;
+    left: 0%;
+    right:0%;
+    z-index: 0;
+	}
+	.wrapper{
+		width: 39em;
+    display: inline-block;
+    position: relative;
+	}
 }

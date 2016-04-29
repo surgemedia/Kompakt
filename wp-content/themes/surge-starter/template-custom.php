@@ -50,7 +50,7 @@
         'remove_tags' => [],
         'vars' => [
                     "contact-us text-center", //class    
-                    'http://kompakt.local/wp-content/uploads/2016/04/Aberdeen-Amenities-Building.jpg', //image 
+                    'http://kompakt.surgehost.com.au/wp-content/uploads/2016/04/Aberdeen-Amenities-Building.jpg', //image 
                   ]
     ]); 
     

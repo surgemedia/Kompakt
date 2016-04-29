@@ -1,0 +1,7 @@
+.related-title{
+	h1{
+		@extend .h1;
+		text-transform: uppercase;
+		margin: 1em 0;
+	}
+}
