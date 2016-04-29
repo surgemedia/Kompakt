@@ -33,7 +33,7 @@
                 Null,                      //image bg
                 Null,
                 NULL,
-                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus aspernatur officia tenetur distinctio suscipit accusamus iure, a ab ullam incidunt dignissimos nemo debitis laudantium voluptate aut asperiores deserunt accusantium est?", //element1
+                get_the_content(), //element1
                 ]
     ]); ?>
 

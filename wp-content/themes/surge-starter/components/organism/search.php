@@ -4,13 +4,14 @@
 
 <section class="<?php echo $var['class']?>">
 		 <?php
+
      get_component([
         'template' => 'molecule/general-box',
         'remove_tags' => ['h2',"p"],
         'vars' => [
                     "read-more text-center col-md-6 col-md-push-6", //class    
-                    get_field("image_read_more"), //image bg
-                    "Kompakt<br> custom solutions",//element1
+                    get_field("side_panel_image"), //image bg
+                    get_field("side_panel_title")."<br>".get_field("side_panel_subtitle"),//element1
                     NULL,
                     NULL,
                     get_component([
@@ -19,7 +20,7 @@
                         'vars' => [
                                     "link text-center", //class    
                                     "read more",                  //image bg
-                                     "/",//element1
+                                     get_field('side_panel_read_more'),//element1
                                                                           
                                     ]
                     ]),

@@ -32,8 +32,8 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": 50,
-                "class": "",
+                "width": 49,
+                "class": "float-left",
                 "id": ""
             },
             "default_value": "",
@@ -53,7 +53,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": 50,
+                "width": 49,
                 "class": "",
                 "id": ""
             },
@@ -86,5 +86,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1461897418
+    "modified": 1461902741
 }
