@@ -23,7 +23,7 @@
         'vars' => [
                 "jumbotron text-center", //class         
                 $image,                    //image bg
-                "kompakt Cabins.<br> Housing Modular Solutions.", //element1
+                get_the_title(), //element1
                 ]
     ]);
     			?>
