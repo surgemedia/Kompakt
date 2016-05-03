@@ -2,7 +2,7 @@
   $var['class'] = $vars[0];
 ?>
 
-<section class="<?php echo $var['class']?>">
+<section id="searchBlock" class="<?php echo $var['class']?>">
 		 <?php
 
      get_component([

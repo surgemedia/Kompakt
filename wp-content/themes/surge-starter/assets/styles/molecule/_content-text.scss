@@ -1,13 +1,12 @@
 .content-text{
-	display: table;
+	// display: table;
 	min-height:15em;
-	width:100%;
 	.wrapper{
-		display: table-cell;
+		// display: table-cell;
+	padding:4em 0em;
     vertical-align: middle;
-    padding:0 20%; 
     p{
     	@extend .p1;
-    }
+    } 
 	}
 }

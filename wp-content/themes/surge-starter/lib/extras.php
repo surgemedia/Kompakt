@@ -49,6 +49,9 @@ $custom_includes = [
   'lib/function-truncate-content.php',    // Scripts and stylesheets
   'lib/function-able-svg-upload.php',    // Able Upload SVG to WP
   'lib/post_type-products.php',    // Custom Post Type
+  'lib/gravity_forms-v5.php'    // Custom Post Type
+
+
 
 
 ];

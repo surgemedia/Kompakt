@@ -9,7 +9,8 @@
   "dependencies": {
     "bootstrap-sass": "3.3.6",
     "owl.carousel": "OwlCarousel2#^2.1.0",
-    "blueimp-gallery-with-desc": "^2.16.4"
+    "blueimp-gallery-with-desc": "^2.16.4",
+    "list.js": "listjs#^1.2.0"
   },
   "overrides": {
     "bootstrap-sass": {
@@ -39,7 +40,8 @@
         "./src/scss/owl.carousel.scss",
         "./src/js/owl.carousel.js"
       ]
-    },"blueimp-gallery-with-desc": {
+    },
+    "blueimp-gallery-with-desc": {
       "main": [
         "./css/blueimp-gallery.min.css",
         "./js/jquery.blueimp-gallery.min.js"

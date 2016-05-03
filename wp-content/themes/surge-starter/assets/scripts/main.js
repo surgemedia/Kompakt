@@ -85,6 +85,8 @@
 
 (function($) {
 
+
+
   function loadCarousel(tag,options){
    $(tag).owlCarousel(options);
   }
@@ -121,9 +123,13 @@ function chosenActivate(tag){
   $(tag).chosen();
 }
 
+  var options = { valueNames: [ 'size', 'keywords','container_type','search-title' ] };
+  var productList = new List('productSearch', options);
+
 $(document).ready(function(){
 
   chosenActivate(".select-chosen");
+  ListSearch(productList);
 });
 
 
@@ -131,5 +137,25 @@ $('.image-gallery-button').on('click', function (event) {
     event.preventDefault();
     blueimp.Gallery($('#links a'));
   })
+
+ 
+
+function ListSearch(list){
+$( "#searchBlock input" ).keyup(function( event ) {
+  list.search($('#searchBlock input').val());
+  });
+
+$("#filterSize").chosen().change(function(e, params){
+  console.log(params.selected);
+    list.search(params.selected, ['size']);
+});
+
+$("#filterContainer").chosen().change(function(e, params){
+  console.log(params);
+  // list.search(params, ['container_type']);
+});
+
+}
+
 
 })(jQuery); // Fully reference jQuery after this point.
