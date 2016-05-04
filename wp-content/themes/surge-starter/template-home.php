@@ -38,7 +38,7 @@
     ]); ?>
 
 
-    <?php addComponent([
+    <?php get_component([
         'template' => 'organism/search',
         'vars' => ["search"]
     ]); ?>

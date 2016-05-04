@@ -86,14 +86,45 @@
 (function($) {
 
 
+/*====================================
+=            Product Caro            =
+====================================*/
 
-  function loadCarousel(tag,options){
-   $(tag).owlCarousel(options);
-  }
 
 
-  loadCarousel(".owlCarousel .owl-carousel",{
-    nav : true,
+var productCarousel = $(".product-carousel .owl-carousel").owlCarousel({
+    nav : false,
+    loop : true,
+    auto : true,
+    center:true,
+    responsive : {
+      // breakpoint from 0 up
+      0 : {
+          items:1
+      },
+      // breakpoint from 600 up
+      750 : {
+          items:1
+      },
+      // breakpoint from 992 up
+      1200 : {
+           items:1
+      }
+    }
+   });
+$('.product-carousel .owl-prev').click(function() {
+    productCarousel.trigger('prev.owl.carousel');
+});
+$('.product-carousel .owl-next').click(function() {
+    productCarousel.trigger('next.owl.carousel');
+});
+
+/*====================================
+=           Home Slider         =
+====================================*/
+
+var owl = $(".owlCarousel .owl-carousel").owlCarousel({
+    nav : false,
     loop : true,
     center:true,
     responsive : {
@@ -111,26 +142,28 @@
       }
     }
    });
+$('.owlCarousel .owl-prev').click(function() {
+    owl.trigger('prev.owl.carousel');
+});
+$('.owlCarousel .owl-next').click(function() {
+    owl.trigger('next.owl.carousel');
+});
 
-  loadCarousel(".product-carousel .owl-carousel",{
-    nav : true,
-    loop : true,
-    items:1
-   });
 
-
-function chosenActivate(tag){
-  $(tag).chosen();
-}
 
   var options = { valueNames: [ 'size', 'keywords','container_type','search-title' ] };
   var productList = new List('productSearch', options);
 
 $(document).ready(function(){
 
-  chosenActivate(".select-chosen");
+
   ListSearch(productList);
+  //chosenActivate(".select-chosen");
 });
+  function chosenActivate(tag){
+    $(tag).chosen(); 
+  }
+
 
 
 $('.image-gallery-button').on('click', function (event) {
@@ -146,16 +179,19 @@ $( "#searchBlock input" ).keyup(function( event ) {
   });
 
 $("#filterSize").chosen().change(function(e, params){
-  console.log(params.selected);
     list.search(params.selected, ['size']);
 });
 
 $("#filterContainer").chosen().change(function(e, params){
-  console.log(params);
-  // list.search(params, ['container_type']);
+  list.search(params.selected, ['container_type']);
 });
 
 }
+/*===============================
+=            Popover            =
+===============================*/
+
+
 
 
 })(jQuery); // Fully reference jQuery after this point.

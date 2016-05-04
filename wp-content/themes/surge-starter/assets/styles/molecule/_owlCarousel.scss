@@ -8,10 +8,18 @@
 		color:#fff;
 	}
 	.owl-next{
-		right:10%;
+		right: 0px;
+	    top: 0px;
+	    width: 50vh;
+	    cursor: pointer;
+	    height: 100%;
 	}
 	.owl-prev{
-		left:10%;
+		left: 0px;
+	    top: 0px;
+	    width: 50vh;
+	    cursor: pointer;
+	    height: 100%;
 	}
 	.owl-item{
 		position:relative;

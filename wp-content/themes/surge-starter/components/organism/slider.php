@@ -11,10 +11,12 @@
         'vars' => [
                     "slider-text text-center", //class    
                     NULL,
-                    "Kompakt",
-                    "creations",
-                    "KOMPAKT KINGS is a short list of our valuable andcreative custumers.<br>
-                    Browse below and get inspired by their brilliant ideas."
+                    get_field('title_slider'),
+                    get_field('subtitle_slider'),
+                    strip_tags(get_field('content_slider'),'<br></ br>'),
+                    '',
+                    'container'
+
                   ]
     ]); 
     

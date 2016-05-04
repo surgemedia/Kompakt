@@ -16,7 +16,10 @@
 	        'template' => 'molecule/product-content',
 	        'remove_tags' => [],
 	        'vars' => [
-	                    "product-content", //class    
+	                    "product-content", //class 
+	                    "price" => get_field('price'),
+	                    "cat" => get_the_category()[0]->name,
+	                    "floorplan" => get_field('floorplan'),
 	                ]
 	    ]); 
 	    

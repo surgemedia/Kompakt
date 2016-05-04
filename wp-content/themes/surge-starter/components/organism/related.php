@@ -5,7 +5,7 @@
       'vars' => [
               "related-title text-center", //class 
               Null,
-              "Other Kompakt Commercial Products"     
+              "Other Kompakt ".get_the_category()[0]->name." Products"     
               ]
   ]); ?>
 

@@ -35,6 +35,26 @@
 	footer{
 		position:absolute;
 		bottom:2em;
+		div#shareBox {
+		    padding: 0em;
+		    background: $grey-background;
+		    margin-bottom: 1em;
+		 i {
+		    font-size: 2em;
+		    display: inline-block;
+		    float: left;
+		    color:$blue;
+			line-height: 1em;
+			text-transform: uppercase;
+			margin-right: 0.2em; 
+		}
+		 a {
+		    padding: 1em 1em 0.5em 1em;
+		    display: inline-block;
+		    color:$blue;
+		    font-weight:bold;
+		}
+		}
 		ul{
 			margin:0;
 			padding:0;
@@ -45,6 +65,12 @@
 				text-transform: uppercase;
 				margin-right:2em; 
 				color:$blue;
+				a {
+					color:$blue;
+					&:hover {
+						color:$blue-light;
+					}
+				}
 				i:before{
 					vertical-align: middle;
 					font-size: 2em;

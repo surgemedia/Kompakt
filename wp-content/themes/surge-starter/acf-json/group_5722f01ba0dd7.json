@@ -1,6 +1,6 @@
 {
     "key": "group_5722f01ba0dd7",
-    "title": "Post Type - Search Tags",
+    "title": "Post Type - Product - Search Tags",
     "fields": [
         {
             "key": "field_5722f0a523119",
@@ -16,11 +16,9 @@
                 "id": ""
             },
             "choices": {
-                "Big": "Big",
-                "Small": "Small",
-                "Square": "Square",
-                "Open": "Open",
-                "Close": "Close"
+                "Villa": "Villa",
+                "House": "House",
+                "Shack": "Shack"
             },
             "default_value": [
 
@@ -63,6 +61,46 @@
             "placeholder": "",
             "disabled": 0,
             "readonly": 0
+        },
+        {
+            "key": "field_572954e77095f",
+            "label": "Price",
+            "name": "price",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "$",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_572959f7b8cb8",
+            "label": "Floorplan",
+            "name": "floorplan",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "pdf"
         }
     ],
     "location": [
@@ -82,5 +120,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1461907941
+    "modified": 1462327821
 }
