@@ -1,8 +1,8 @@
 <?php 
-  $var['class'] = $vars[0];
+  $vars['class'] = $vars[0];
 
  ?>
-<section class="<?php echo $var['class'] ?>">
+<section class="<?php echo $vars['class'] ?>">
   
 	<?php 
     get_component([
@@ -11,8 +11,8 @@
         'vars' => [
                     "slider-text text-center", //class    
                     NULL,
-                    get_field('title_slider'),
-                    get_field('subtitle_slider'),
+                    $vars["title_slider"],
+                    $vars["subtitle_slider"],
                     strip_tags(get_field('content_slider'),'<br></ br>'),
                     '',
                     'container'

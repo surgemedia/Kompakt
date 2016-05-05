@@ -119,7 +119,9 @@ wp_reset_postdata();
         'remove_tags' => [],
         'vars' => [
                     "slider text-center", //class    
-                  
+                    "title_slider" => get_field('title_slider'),
+                    "subtitle_slider" => get_field('subtitle_slider'),
+                    
                   ]
     ]); 
     

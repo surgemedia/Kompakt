@@ -7,11 +7,13 @@
     <a href="">back to results </a>
     <header>
        <h2>kompakt <?php echo $vars['cat']; ?></h2>
-       <h1><?php the_title(); ?></h1>
+       <h1>
+      <?php echo $vars['title']; ?>
+       </h1>
        <p class="price">$<?php echo $vars['price']; ?></p>
     </header>
      <div class="entry-content">
-       <?php the_content(); ?>
+      <?php echo $vars['content']; ?>
      </div>
      <footer>
      <div id="shareBox" class="collapse" >

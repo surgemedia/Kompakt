@@ -20,6 +20,9 @@
 	                    "price" => get_field('price'),
 	                    "cat" => get_the_category()[0]->name,
 	                    "floorplan" => get_field('floorplan'),
+	                    "title" => get_the_title(),
+	                    "content" => get_the_content(),
+
 	                ]
 	    ]); 
 	    

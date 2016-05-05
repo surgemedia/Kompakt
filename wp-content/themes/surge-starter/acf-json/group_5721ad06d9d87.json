@@ -3,6 +3,24 @@
     "title": "Custom Page - Galleries",
     "fields": [
         {
+            "key": "field_572ae5c25bef1",
+            "label": "blurb",
+            "name": "blurb",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1
+        },
+        {
             "key": "field_5721ad29294e6",
             "label": "Gallery",
             "name": "gallery",
@@ -113,6 +131,22 @@
                     "mime_types": ""
                 }
             ]
+        },
+        {
+            "key": "field_572af01f8e932",
+            "label": "form",
+            "name": "form",
+            "type": "gravity_forms_field",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "allow_null": 0,
+            "allow_multiple": 0
         }
     ],
     "location": [
@@ -132,5 +166,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1462344447
+    "modified": 1462431785
 }
