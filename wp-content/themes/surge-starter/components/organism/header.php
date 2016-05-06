@@ -1,8 +1,8 @@
-<header class="banner">
+<header class="banner hide-print">
   <div class="container">
     <?php addComponent([
           'template' => 'atom/brand',
-          'vars' => []
+          'vars' => [ 'logo' => aq_resize(get_field('brand','option'),230,40,true,true,false)]
       ]); ?>
       <?php addComponent([
           'template' => 'molecule/social-contact',

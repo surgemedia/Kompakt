@@ -69,7 +69,7 @@ if ( $query->have_posts() ) {
         'remove_tags' => [],
         'vars' => [
                     "product-article text-center", //class    
-                    getFeaturedUrl(), //image 
+                    aq_resize(getFeaturedUrl(),645,350,true,true,false), //image 
                     get_the_title(),//element1
                     truncate(get_the_content(),15,'',false),
                     get_component([

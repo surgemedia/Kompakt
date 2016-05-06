@@ -1,4 +1,4 @@
-<section class="related">
+<section class="related hide-print">
 	<?php get_component([
       'template' => 'molecule/general-box',
       'remove_tags' => ["h2","p"],

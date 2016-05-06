@@ -1,6 +1,7 @@
 <?php
 $vars['class'] = $vars[0];
 $vars['text'] = $vars[1];
+
 // $vars['repeater']
 ?>
 <section class="<?php echo $vars['class'] ?>">
@@ -8,13 +9,15 @@ $vars['text'] = $vars[1];
     <ul>
     <?php for ($i=0; $i < sizeof($vars['repeater']); $i++) { ?>
         <li id="gallery<?php echo $i ?>" class="col-xs-12 col-md-6"> <?php
+            
+            $vars['split'] = explode(' ',$vars['repeater'][$i]['title']);
             get_component([
             'template' => 'molecule/general-box',
             'remove_tags' => ["p"],
             'vars' => [
             "gallery-item text-center col-xs-12 col-sm-7 col-md-9 col-lg-12", //class
-            $vars['repeater'][$i]['image'],
-            $vars['repeater'][$i]['title'],
+            aq_resize($vars['repeater'][$i]['image'],530,380,true,true,true),
+            $vars['split'][0].'<br>'.$vars['split'][1],
             $vars['repeater'][$i]['subtitle'],
             NULL,
             get_component([

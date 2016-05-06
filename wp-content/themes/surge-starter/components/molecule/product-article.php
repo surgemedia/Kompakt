@@ -15,7 +15,7 @@
 			<div class="img-bg" style="background-image:url('<?php echo $vars['thumb'] ?>');"> </div>
 	</div>
 	<div class="wrapper">
-		<h1 class="search-title"><?php echo $vars['title']?></h1>
+		<h1 class="search_title"><?php echo $vars['title']?></h1>
 		<p class="keywords"><?php echo $vars['content']?></p>
 		<?php echo $vars['button']; ?>
 	</div>

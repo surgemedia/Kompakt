@@ -5,7 +5,7 @@
 
  ?>
 
-<section class="<?php echo $vars['class'] ?>" >
+<section id="contact" class="<?php echo $vars['class'] ?>" >
 	
 	<div class="wrapper">
         <!-- contact-us gravity form -->

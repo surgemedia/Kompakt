@@ -4,5 +4,5 @@
   $var['action'] = $vars[2];
  ?>
 
-<button class="<?php echo $var['class'] ?>" action="<?php echo $var['action'] ?>"><?php echo $var['name']; ?>
+<button class="<?php echo $var['class'] ?>" onclick="<?php echo $var['action'] ?>"><?php echo $var['name']; ?>
 </button>

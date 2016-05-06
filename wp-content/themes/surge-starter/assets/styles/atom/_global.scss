@@ -58,5 +58,40 @@ body{
 }
 
 	
-	
 
+@media print {
+  * {
+  	visibility:hidden; 
+  }
+  .product-content {
+  	visibility:visible;
+  	padding: 0 !important;
+  	margin: 0 !important;
+  	*{
+  		visibility:visible;
+  		padding: 0 !important;
+  		margin: 0 !important;
+  	} 
+  } 
+  .jumbotron {
+	  	visibility:visible;
+	  	padding: 0 !important;
+	  	margin: 0 !important;
+	  	*{
+	  		visibility:visible;
+	  		padding: 0 !important;
+	  		margin: 0 !important;
+	  	}
+  	}
+  	.content-text {
+		visibility:visible;
+	  	padding: 0 !important;
+	  	margin: 0 !important;
+	  	*{
+	  		visibility:visible;
+	  		padding: 0 !important;
+	  		margin: 0 !important;
+	  	}
+  	} 
+
+} 

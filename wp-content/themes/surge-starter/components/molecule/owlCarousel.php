@@ -20,7 +20,7 @@
 			        'remove_tags' => ["h1"],
 			        'vars' => [
 			                    "slider-item text-center", //class    
-			                    getFeaturedUrl(),
+			                    aq_resize(getFeaturedUrl(),640,476,true,true,false),
 			                    NULL,
 			                    get_the_title(),
 			                    truncate(get_the_content(),15,'',false)

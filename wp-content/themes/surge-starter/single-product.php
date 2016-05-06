@@ -34,7 +34,7 @@
         'template' => 'organism/enquiry',
         'remove_tags' => [],
         'vars' => [
-                "enquiry", //class      
+                "enquiry hide-print", //class      
                 ]
     ]); ?>
 
@@ -42,7 +42,7 @@
         'template' => 'organism/related',
         'remove_tags' => [],
         'vars' => [
-                "related", //class      
+                "related hide-print", //class      
                 ]
     ]); ?>
 

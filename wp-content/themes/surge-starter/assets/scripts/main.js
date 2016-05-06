@@ -131,14 +131,18 @@ $('.owlCarousel .owl-next').click(function() {
 
 
 
-  var options = { valueNames: [ 'size', 'keywords','container_type','search-title' ] };
+  var options = { valueNames: [ 'size', 'keywords','container_type','search_title' ] };
   var productList = new List('productSearch', options);
 
 $(document).ready(function(){
 
 
-  ListSearch(productList);
-  // chosenActivate(".select-chosen");
+  $("#filterContainer").chosen();
+  $("#filterSize").chosen();
+
+  $( "#searchBlock .link" ).click(function() {
+      ListSearch(productList);
+  });
 });
   function chosenActivate(tag){
     $(tag).chosen(); 
@@ -158,23 +162,68 @@ popGallery('gallery1');
  
 
 function ListSearch(list){
-$( "#searchBlock input" ).keyup(function( event ) {
-  list.search($('#searchBlock input').val());
-  });
+list.filter(); 
 
-$("#filterSize").chosen().change(function(e, params){
-    list.search(params.selected, ['size']);
-});
 
-$("#filterContainer").chosen().change(function(e, params){
-  list.search(params.selected, ['container_type']);
+var filtertype = $("#filterContainer").chosen().val();
+var filterSize = $("#filterSize").chosen().val();
+var filterTitle = $( "#searchBlock input" ).val().toLowerCase();
+list.filter(function(item) {
+  var resultArray = true;
+  var checkArray = [];
+
+
+  var title = item.values().search_title.toLowerCase();
+  var type = item.values().container_type
+  var size = item.values().size;
+  console.log([title,type,size]);
+
+
+  if(title.indexOf(filterTitle) < 0 && filterTitle.length > 0){
+    resultArray = false;
+  } 
+
+  if(size.indexOf(filterSize) < 0 && filterSize.length > 0){
+    resultArray = false;
+  }
+
+  if(type.indexOf(filtertype) < 0 && filtertype.length > 0){
+    resultArray = false;
+  }
+
+  console.log(resultArray);
+
+   if (resultArray) {
+       return true;
+   } else {
+       return false;
+   }
 });
 
 }
-/*===============================
-=            Popover            =
-===============================*/
 
+/*====================================
+=            Active Class            =
+====================================*/
+var windowLocation = window.location.hostname+window.location.pathname+window.location.hash;
+if( windowLocation.indexOf('#contact') > 0){
+  $('nav a').parent().removeClass('current_page_item');
+  $('nav a[href^="/#contact"]').parent().addClass('current_page_item');
+} else {
+  $('nav a[href^="/#contact"]').parent().removeClass('current_page_item');
+} 
+
+$( window ).scroll(function() {
+windowLocation = window.location.hostname+window.location.pathname+window.location.hash;
+if( windowLocation.indexOf('#contact') > 0){
+  $('nav a').parent().removeClass('current_page_item');
+  $('nav a[href^="/#contact"]').parent().addClass('current_page_item');
+} else {
+  $('nav a[href^="/#contact"]').parent().removeClass('current_page_item');
+}
+});
+ 
+ 
 
 
 

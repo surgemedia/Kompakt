@@ -10,7 +10,7 @@
         'remove_tags' => ['h2',"p"],
         'vars' => [
                     "read-more text-center col-md-6 col-md-push-6", //class    
-                    get_field("side_panel_image"), //image bg
+                    aq_resize(get_field("side_panel_image"),951,420,true,true,false), //image bg
                     get_field("side_panel_title")."<br>".get_field("side_panel_subtitle"),//element1
                     NULL,
                     NULL,

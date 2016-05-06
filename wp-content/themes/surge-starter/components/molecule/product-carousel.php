@@ -4,7 +4,7 @@
  ?>
 
 <div class="<?php echo $vars['class'];?>">
-	<div class="owl-carousel">
+	<div class="owl-carousel hide-print">
 
 	  <?php 
 

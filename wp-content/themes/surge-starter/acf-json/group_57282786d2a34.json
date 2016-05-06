@@ -70,6 +70,13 @@
                 "operator": "==",
                 "value": "template-home.php"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-custom.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -80,5 +87,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1462321102
+    "modified": 1462491401
 }
