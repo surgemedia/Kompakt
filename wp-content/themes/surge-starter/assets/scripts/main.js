@@ -89,16 +89,23 @@
 /*====================================
 =            Product Caro            =
 ====================================*/
-
-
-
-$(".product-carousel .owl-carousel").owlCarousel({
+var product =  $(".product-carousel .owl-carousel").owlCarousel({
     nav : false,
     loop : true,
     auto : true,
     center:true,
+    dots: true,
+    dotsContainer:'#owlDotContainer',
      items:1
    });
+
+$('#owlDotContainer .prev').click(function() {
+    product.trigger('prev.owl.carousel');
+});
+$('#owlDotContainer .next').click(function() {
+    product.trigger('next.owl.carousel');
+});
+
 /*====================================
 =           Home Slider         =
 ====================================*/

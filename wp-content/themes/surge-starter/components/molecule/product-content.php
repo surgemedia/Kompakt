@@ -4,7 +4,7 @@
   ?>
   <article class="<?php echo $vars['class'] ?>">
    <div class="wrapper">
-    <a href="">back to results </a>
+    <a href="/#searchBlock">back to results </a>
     <header>
        <h2>kompakt <?php echo $vars['cat']; ?></h2>
        <h1>

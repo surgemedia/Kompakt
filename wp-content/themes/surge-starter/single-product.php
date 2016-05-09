@@ -5,7 +5,8 @@
 	        'template' => 'molecule/product-carousel',
 	        'remove_tags' => [],
 	        'vars' => [
-	                    "product-carousel", //class    
+	                    "product-carousel", //class
+	                   "repeater" => get_field('gallery')
 	                ]
 	    ]); 
 	    
