@@ -5,7 +5,8 @@
 	        'template' => 'molecule/product-carousel',
 	        'remove_tags' => [],
 	        'vars' => [
-	                    "product-carousel", //class    
+	                    "product-carousel", //class
+	                   "repeater" => get_field('gallery')
 	                ]
 	    ]); 
 	    
@@ -16,7 +17,13 @@
 	        'template' => 'molecule/product-content',
 	        'remove_tags' => [],
 	        'vars' => [
-	                    "product-content", //class    
+	                    "product-content", //class 
+	                    "price" => get_field('price'),
+	                    "cat" => get_the_category()[0]->name,
+	                    "floorplan" => get_field('floorplan'),
+	                    "title" => get_the_title(),
+	                    "content" => get_the_content(),
+
 	                ]
 	    ]); 
 	    
@@ -28,7 +35,7 @@
         'template' => 'organism/enquiry',
         'remove_tags' => [],
         'vars' => [
-                "enquiry", //class      
+                "enquiry hide-print", //class      
                 ]
     ]); ?>
 
@@ -36,7 +43,7 @@
         'template' => 'organism/related',
         'remove_tags' => [],
         'vars' => [
-                "related", //class      
+                "related hide-print", //class      
                 ]
     ]); ?>
 

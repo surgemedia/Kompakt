@@ -13,17 +13,14 @@
         
     =============================================*/
 
-
-   if (has_post_thumbnail()) { 
-      $image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); 
-   } else{$image="";}
+   
  	get_component([
         'template' => 'molecule/general-box',
         'remove_tags' => ["h2","p"],
         'vars' => [
                 "jumbotron text-center", //class         
-                $image,                    //image bg
-                "kompakt Cabins.<br> Housing Modular Solutions.", //element1
+                aq_resize(get_field('background_image'),1920,1080,true,true,true),//image bg
+                get_field('title').' <br>'.get_field('subtitle'), //element1
                 ]
     ]);
     			?>
@@ -32,82 +29,75 @@
         'template' => 'molecule/general-box',
         'remove_tags' => ["h1","h2"],
         'vars' => [
-                "content-text text-center", //class      
+                "content-text text-center container", //class      
                 Null,                      //image bg
                 Null,
                 NULL,
-                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus aspernatur officia tenetur distinctio suscipit accusamus iure, a ab ullam incidunt dignissimos nemo debitis laudantium voluptate aut asperiores deserunt accusantium est?", //element1
+                get_the_content(), //element1
                 ]
     ]); ?>
 
 
-    <?php addComponent([
+    <?php get_component([
         'template' => 'organism/search',
         'vars' => ["search"]
     ]); ?>
 
-<section class="search-result">
-<?php for ($i=0; $i <2 ; $i++) { 
-    get_component([
-        'template' => 'molecule/product-article',
-        'remove_tags' => [],
-        'vars' => [
-                    "product-article text-center col-md-4", //class    
-                    'http://kompakt.surgehost.com.au/wp-content/uploads/2016/04/Aberdeen-Amenities-Building.jpg', //image 
-                    "Product Name",//element1
-                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, cupiditate.",
-                    get_component([
-                        'template' => 'atom/button-link',
-                        'return_string' => true,
-                        'vars' => [
-                                    "link text-center", //class    
-                                    "find out more",       //text
-                                     "/",//link
-                                    ]
-                    ]),
-                  ]
-    ]); 
-        get_component([
-        'template' => 'molecule/product-article',
-        'remove_tags' => [],
-        'vars' => [
-                    "product-article text-center col-md-4", //class    
-                    'http://kompakt.surgehost.com.au/wp-content/uploads/2016/04/Conversion-Internal-Render-1.jpg', //image 
-                    "Product Name",//element1
-                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, cupiditate.",
-                    get_component([
-                        'template' => 'atom/button-link',
-                        'return_string' => true,
-                        'vars' => [
-                                    "link text-center", //class    
-                                    "find out more",       //text
-                                     "/",//link
-                                    ]
-                    ]),
-                  ]
-    ]); 
-        get_component([
-        'template' => 'molecule/product-article',
-        'remove_tags' => [],
-        'vars' => [
-                    "product-article text-center col-md-4", //class    
-                    'http://kompakt.surgehost.com.au/wp-content/uploads/2016/04/Daisy-Hill-8.jpg', //image 
-                    "Product Name",//element1
-                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, cupiditate.",
-                    get_component([
-                        'template' => 'atom/button-link',
-                        'return_string' => true,
-                        'vars' => [
-                                    "link text-center", //class    
-                                    "find out more",       //text
-                                     "/",//link
-                                    ]
-                    ]),
-                  ]
-    ]); 
+<section id="productSearch" class="search-result">
+<input id="productFilter" class="search hidden" />
+
+
+<ul class="list list-inline container-fluid">
+<?php
     
+// WP_Query arguments
+$args = array (
+    'post_type'              => array( 'product' ),
+);
+
+// The Query
+$query = new WP_Query( $args );
+
+// The Loop
+if ( $query->have_posts() ) {
+    while ( $query->have_posts() ) {
+        $query->the_post(); ?>
+        <li class=" col-md-4">
+        <?php
+        get_component([
+        'template' => 'molecule/product-article',
+        'remove_tags' => [],
+        'vars' => [
+                    "product-article text-center", //class    
+                    aq_resize(getFeaturedUrl(),645,350,true,true,false), //image 
+                    get_the_title(),//element1
+                    truncate(get_the_content(),15,'',false),
+                    get_component([
+                        'template' => 'atom/button-link',
+                        'return_string' => true,
+                        'vars' => [
+                                    "link text-center", //class    
+                                    "find out more",       //text
+                                     get_permalink(),//link
+                                    ]
+                    ]),
+                    get_field('container_type'),
+                    get_field('size')
+
+                  ]
+    ]); 
+    } ?>
+    </li>
+    <?php
+} else {
+    // no posts found
 }
+
+// Restore original Post Data
+wp_reset_postdata();
+
     ?>
+    </ul>
 </section>
 
 <?php 
@@ -115,8 +105,8 @@
         'template' => 'molecule/contact-us',
         'remove_tags' => [],
         'vars' => [
-                    "contact-us text-center", //class    
-                    'http://kompakt.surgehost.com.au/wp-content/uploads/2016/04/Aberdeen-Amenities-Building.jpg', //image 
+                    "contact-us text-center", //class
+                     get_field('form')
                   ]
     ]); 
     
@@ -129,7 +119,9 @@
         'remove_tags' => [],
         'vars' => [
                     "slider text-center", //class    
-                  
+                    "title_slider" => get_field('title_slider'),
+                    "subtitle_slider" => get_field('subtitle_slider'),
+                    
                   ]
     ]); 
     

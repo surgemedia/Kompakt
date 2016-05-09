@@ -4,24 +4,44 @@
  ?>
 <section class="<?php echo $var['class'] ?>">
 	<div class="owl-carousel">
-	  <?php for ($i=0; $i < 6 ; $i++) { ?>
-	  	
-	  		<?php 
-			    get_component([
+	<?php 
+		// WP_Query arguments
+		$args = array ('post_type'              => array( 'testimonial' ),);
+
+		// The Query
+		$query = new WP_Query( $args );
+
+		// The Loop
+		if ( $query->have_posts() ) {
+			while ( $query->have_posts() ) {
+				$query->the_post();
+				 get_component([
 			        'template' => 'molecule/general-box',
 			        'remove_tags' => ["h1"],
 			        'vars' => [
 			                    "slider-item text-center", //class    
-			                    "http://kompakt.surgehost.com.au/wp-content/uploads/2016/04/Between-Accommodation-Units2.jpg",
+			                    aq_resize(getFeaturedUrl(),640,476,true,true,false),
 			                    NULL,
-			                    "Custumised Product",
-			                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam ab, itaque aliquam quas reiciendis eligendi."
+			                    get_the_title(),
+			                    truncate(get_the_content(),15,'',false)
 			                  ]
 			    ]); 
-			    
-			    ?>
-	  	
-	  <?php } ?>
+			}
+		} else {
+			// no posts found
+		}
+
+		// Restore original Post Data
+		wp_reset_postdata();
+
+?>
+	 
+	</div>
+ 	<div class="owl-controls hidden-xs hidden-sm">
+        <div class="owl-nav">
+            <div class="owl-prev"></div>
+            <div class="owl-next"></div>
+        </div>
 	</div>
 	
 </section>

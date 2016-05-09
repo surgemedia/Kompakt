@@ -1,18 +1,26 @@
 <?php 
-  $var['class'] = $vars[0];
-  $var['thumb'] = $vars[1];
-  $var['title'] = $vars[2];
-  $var['content'] = $vars[3];
-  $var['button'] = $vars[4];
+  $vars['class'] = $vars[0];
+  $vars['thumb'] = $vars[1];
+  $vars['title'] = $vars[2];
+  $vars['content'] = $vars[3];
+  $vars['button'] = $vars[4];
+  $vars['container_type'] = $vars[5];
+  $vars['size-field'] = $vars[6];
+
+
  ?>
 
-<article class="<?php echo $var['class'] ?>">
+<article class="<?php echo $vars['class'] ?>">
 	<div class="row">
-			<div class="img-bg" style="background-image:url('<?php echo $var['thumb'] ?>');"> </div>
+			<div class="img-bg" style="background-image:url('<?php echo $vars['thumb'] ?>');"> </div>
 	</div>
 	<div class="wrapper">
-		<h1><?php echo $var['title']?></h1>
-		<p><?php echo $var['content']?></p>
-		<?php echo $var['button']; ?>
+		<h1 class="search_title"><?php echo $vars['title']?></h1>
+		<p class="keywords"><?php echo $vars['content']?></p>
+		<?php echo $vars['button']; ?>
 	</div>
+	<pre class="search-tags hidden">
+		<p class="container_type"><?php echo  $vars['container_type'] ?></p>
+		<p class="size"><?php echo  $vars['size-field'] ?></p>
+	</pre>
 </article>

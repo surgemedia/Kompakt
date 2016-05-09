@@ -85,13 +85,33 @@
 
 (function($) {
 
-  function loadCarousel(tag,options){
-   $(tag).owlCarousel(options);
-  }
+ 
+/*====================================
+=            Product Caro            =
+====================================*/
+var product =  $(".product-carousel .owl-carousel").owlCarousel({
+    nav : false,
+    loop : true,
+    auto : true,
+    center:true,
+    dots: true,
+    dotsContainer:'#owlDotContainer',
+     items:1
+   });
 
+$('#owlDotContainer .prev').click(function() {
+    product.trigger('prev.owl.carousel');
+});
+$('#owlDotContainer .next').click(function() {
+    product.trigger('next.owl.carousel');
+});
 
-  loadCarousel(".owlCarousel .owl-carousel",{
-    nav : true,
+/*====================================
+=           Home Slider         =
+====================================*/
+
+var owl = $(".owlCarousel .owl-carousel").owlCarousel({
+    nav : false,
     loop : true,
     center:true,
     responsive : {
@@ -109,27 +129,109 @@
       }
     }
    });
-
-  loadCarousel(".product-carousel .owl-carousel",{
-    nav : true,
-    loop : true,
-    items:1
-   });
-
-
-function chosenActivate(tag){
-  $(tag).chosen();
-}
-
-$(document).ready(function(){
-
-  chosenActivate(".select-chosen");
+$('.owlCarousel .owl-prev').click(function() {
+    owl.trigger('prev.owl.carousel');
+});
+$('.owlCarousel .owl-next').click(function() {
+    owl.trigger('next.owl.carousel');
 });
 
 
-$('.image-gallery-button').on('click', function (event) {
+
+  var options = { valueNames: [ 'size', 'keywords','container_type','search_title' ] };
+  var productList = new List('productSearch', options);
+
+$(document).ready(function(){
+
+
+  $("#filterContainer").chosen();
+  $("#filterSize").chosen();
+
+  $( "#searchBlock .link" ).click(function() {
+      ListSearch(productList);
+  });
+});
+  function chosenActivate(tag){
+    $(tag).chosen(); 
+  }
+
+function popGallery(id){
+  $('#'+id+' button').on('click', function (event) {
     event.preventDefault();
-    blueimp.Gallery($('#links a'));
+    var options = {
+      container: '#'+id+' .blueimp-gallery'
+    };
+    blueimp.Gallery($('#'+id+' .links a'), options);
   })
+}
+popGallery('gallery0');
+popGallery('gallery1');
+ 
+
+function ListSearch(list){
+list.filter(); 
+
+
+var filtertype = $("#filterContainer").chosen().val();
+var filterSize = $("#filterSize").chosen().val();
+var filterTitle = $( "#searchBlock input" ).val().toLowerCase();
+list.filter(function(item) {
+  var resultArray = true;
+  var checkArray = [];
+
+
+  var title = item.values().search_title.toLowerCase();
+  var type = item.values().container_type
+  var size = item.values().size;
+  console.log([title,type,size]);
+
+
+  if(title.indexOf(filterTitle) < 0 && filterTitle.length > 0){
+    resultArray = false;
+  } 
+
+  if(size.indexOf(filterSize) < 0 && filterSize.length > 0){
+    resultArray = false;
+  }
+
+  if(type.indexOf(filtertype) < 0 && filtertype.length > 0){
+    resultArray = false;
+  }
+
+  console.log(resultArray);
+
+   if (resultArray) {
+       return true;
+   } else {
+       return false;
+   }
+});
+
+}
+
+/*====================================
+=            Active Class            =
+====================================*/
+var windowLocation = window.location.hostname+window.location.pathname+window.location.hash;
+if( windowLocation.indexOf('#contact') > 0){
+  $('nav a').parent().removeClass('current_page_item');
+  $('nav a[href^="/#contact"]').parent().addClass('current_page_item');
+} else {
+  $('nav a[href^="/#contact"]').parent().removeClass('current_page_item');
+} 
+
+$( window ).scroll(function() {
+windowLocation = window.location.hostname+window.location.pathname+window.location.hash;
+if( windowLocation.indexOf('#contact') > 0){
+  $('nav a').parent().removeClass('current_page_item');
+  $('nav a[href^="/#contact"]').parent().addClass('current_page_item');
+} else {
+  $('nav a[href^="/#contact"]').parent().removeClass('current_page_item');
+}
+});
+ 
+ 
+
+
 
 })(jQuery); // Fully reference jQuery after this point.

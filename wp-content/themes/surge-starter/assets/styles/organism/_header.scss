@@ -3,7 +3,7 @@ header.banner{
 	padding: 2em 0;
 
 	.nav-primary{
-		background-color: $blue-light;
+	background-color: $blue-light;
     margin-bottom: -5em;
     margin-top: 1.5em;
     z-index: 1;
@@ -19,11 +19,23 @@ header.banner{
 					padding:1.5em 1.7em;
 				}
 				&.current_page_item{
-					a{
+					a {
 						background-color:$blue-dark;
 						&:hover{
 							color:#fff;
 						}
+					}
+				}
+			}
+		}
+		.social-responsive {
+			li {
+				a {
+					background:none;
+					font-size:1em;
+					i {
+						font-size:1em;
+						background:none;
 					}
 				}
 			}

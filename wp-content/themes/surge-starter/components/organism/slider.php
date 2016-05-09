@@ -1,8 +1,8 @@
 <?php 
-  $var['class'] = $vars[0];
+  $vars['class'] = $vars[0];
 
  ?>
-<section class="<?php echo $var['class'] ?>">
+<section class="<?php echo $vars['class'] ?>">
   
 	<?php 
     get_component([
@@ -11,10 +11,12 @@
         'vars' => [
                     "slider-text text-center", //class    
                     NULL,
-                    "Kompakt",
-                    "creations",
-                    "KOMPAKT KINGS is a short list of our valuable andcreative custumers.<br>
-                    Browse below and get inspired by their brilliant ideas."
+                    $vars["title_slider"],
+                    $vars["subtitle_slider"],
+                    strip_tags(get_field('content_slider'),'<br></ br>'),
+                    '',
+                    'container'
+
                   ]
     ]); 
     
