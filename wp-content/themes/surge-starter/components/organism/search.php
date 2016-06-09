@@ -39,7 +39,7 @@
         'template' => 'molecule/general-box',
         'remove_tags' => ["h2"],
         'vars' => [
-                "banner-side text-center col-md-6 col-md-pull-6", //class      
+                "banner-side text-center col-xs-12 col-md-6 col-md-pull-6", //class      
                 Null,                      //image bg
                 get_field('banner_title'),
                 NULL,
