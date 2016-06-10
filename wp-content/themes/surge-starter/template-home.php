@@ -64,6 +64,10 @@ if ( $query->have_posts() ) {
         $query->the_post(); ?>
         <li class=" col-md-4">
         <?php
+        $the_content = get_field('short_blurb');
+        if(0 >= strlen($the_content)){
+            $the_content = get_the_content();
+        }
         get_component([
         'template' => 'molecule/product-article',
         'remove_tags' => [],
@@ -71,7 +75,7 @@ if ( $query->have_posts() ) {
                     "product-article text-center", //class    
                     aq_resize(getFeaturedUrl(),645,350,true,true,false), //image 
                     get_the_title(),//element1
-                    truncate(get_the_content(),15,'',false),
+                    truncate($the_content,20,'',false),
                     get_component([
                         'template' => 'atom/button-link',
                         'return_string' => true,
@@ -113,7 +117,7 @@ wp_reset_postdata();
     ?>
 
 
-<?php 
+<?php /*
     get_component([
         'template' => 'organism/slider',
         'remove_tags' => [],
@@ -124,7 +128,7 @@ wp_reset_postdata();
                     
                   ]
     ]); 
-    
+    */
     ?>
 
 

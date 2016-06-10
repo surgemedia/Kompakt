@@ -57,7 +57,7 @@
     ?>
 
 
-<?php 
+<?php /*
     get_component([
         'template' => 'organism/slider',
         'remove_tags' => [],
@@ -67,7 +67,7 @@
                     "subtitle_slider" => get_field('subtitle_slider'),
                   ]
     ]); 
-    
+    */
     ?>
 
 

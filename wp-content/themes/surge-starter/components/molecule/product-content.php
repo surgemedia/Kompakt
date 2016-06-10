@@ -10,7 +10,8 @@
        <h1>
       <?php echo $vars['title']; ?>
        </h1>
-       <p class="price">$<?php echo $vars['price']; ?></p>
+
+       <p class="price"><?php echo $vars['price']; ?></p>
     </header>
      <div class="entry-content">
       <?php echo $vars['content']; ?>
