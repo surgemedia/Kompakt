@@ -229,6 +229,23 @@ if( windowLocation.indexOf('#contact') > 0){
   $('nav a[href^="/#contact"]').parent().removeClass('current_page_item');
 }
 });
+
+if( windowLocation.indexOf('#searchBlock') > 0){
+  $('nav a').parent().removeClass('current_page_item');
+  $('nav a[href^="/#searchBlock"]').parent().addClass('current_page_item');
+} else {
+  $('nav a[href^="/#searchBlock"]').parent().removeClass('current_page_item');
+} 
+
+$( window ).scroll(function() {
+windowLocation = window.location.hostname+window.location.pathname+window.location.hash;
+if( windowLocation.indexOf('#searchBlock') > 0){
+  $('nav a').parent().removeClass('current_page_item');
+  $('nav a[href^="/#searchBlock"]').parent().addClass('current_page_item');
+} else {
+  $('nav a[href^="/#searchBlock"]').parent().removeClass('current_page_item');
+}
+});
  
  
 

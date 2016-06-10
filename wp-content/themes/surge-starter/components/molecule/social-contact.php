@@ -20,11 +20,13 @@
                 </i>
             </a>
         </li>
-        <li>
-            <a href='<?php echo  get_field("pinterest","option"); ?>'>
+        <?php /* ?>
+        <!-- <li>
+            <a href='<?php //echo  get_field("pinterest","option"); ?>'>
                 <i class="icon-pinterest">
                 </i>
             </a>
-        </li>
+        </li> -->
+        <?php */ ?>
     </ul>
 </div>

@@ -1,5 +1,6 @@
 .product-article{
 	padding-bottom:3em;
+	min-height:680px;
 		.img-bg{
 			height:25em;
 			background-size:cover;
@@ -13,11 +14,14 @@
 				color:$text-color;
 				text-transform:uppercase;
 				margin-bottom: 0.8em;
+				height: 2em;
 			}
 			p{
 				@extend .p1;
 				line-height:1.5em;
 				margin-bottom: 2em;
+				height: 6em;
+				overflow: hidden;
 			}
 			.link{
 				width:80%;
