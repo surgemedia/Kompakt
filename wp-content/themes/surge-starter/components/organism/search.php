@@ -27,12 +27,23 @@
                   ]
     ]); ?>
      <?php 
-     get_component([
+     /*get_component([
         'template' => 'molecule/search-fields',
         'remove_tags' => [],
         'vars' => [
                     "col-md-6 col-md-pull-6"
                 ]
-    ]);
+    ]);*/
      ?>
+     <?php get_component([
+        'template' => 'molecule/general-box',
+        'remove_tags' => ["h2"],
+        'vars' => [
+                "banner-side text-center col-xs-12 col-md-6 col-md-pull-6", //class      
+                Null,                      //image bg
+                get_field('banner_title'),
+                NULL,
+                get_field('banner_text'), //element1
+                ]
+    ]); ?>
 </section>

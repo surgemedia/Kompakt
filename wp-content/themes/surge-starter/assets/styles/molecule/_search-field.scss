@@ -1,5 +1,5 @@
 .search-field{
-	background:$blue;
+	background:$blue-new;
 	height:30em;
 	padding-top:4em;
 	> div{
@@ -79,4 +79,23 @@
 	input{
 		height: $input-height;
 	}						
+}
+
+.banner-side{
+	background:$blue-new;
+	height:30em;
+	display: table;
+	.wrapper{
+		display: table-cell;
+		vertical-align: middle;
+		color:#fff;
+		h1{
+			@extend .h1;
+			text-transform: uppercase;
+		}
+		p{
+			@extend .p3;
+		}
+	}
+
 }
