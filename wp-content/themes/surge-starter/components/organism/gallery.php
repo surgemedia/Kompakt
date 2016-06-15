@@ -21,13 +21,21 @@ $vars['text'] = $vars[1];
             $vars['repeater'][$i]['subtitle'],
             NULL,
             get_component([
-            'template' => 'atom/button-call',
+            'template' => 'atom/button-link',
             'return_string' => true,
             'vars' => [
             "link text-center image-gallery-button", //class
-            "view gallery",       //text
-            "",//link
+            "Enquire Now",       //text
+            "#contact",//link
             ]
+            // get_component([
+            // 'template' => 'atom/button-call',
+            // 'return_string' => true,
+            // 'vars' => [
+            // "link text-center image-gallery-button", //class
+            // "view gallery",       //text
+            // "",//link
+            // ]
             ]),
             
             ]
